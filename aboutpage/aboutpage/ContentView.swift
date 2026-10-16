@@ -189,47 +189,43 @@ struct MusicView: View {
                 .font(.body)
                 .foregroundStyle(.secondary)
 
-            HStack {
-                Image(systemName: "music.note")
-                    .foregroundStyle(.purple)
-                Text("Black Mamba")
-                Spacer()
-                Text("2020")
-                    .foregroundStyle(.secondary)
-            }
+            Text("點擊歌曲即可前往 YouTube 觀看官方音樂錄影帶。")
+                .font(.caption)
+                .foregroundStyle(.cyan)
+
+            SongLinkView(
+                title: "Black Mamba",
+                year: "2020",
+                youtubeURL: "https://www.youtube.com/watch?v=ZeerrnuLi5E",
+                color: .purple
+            )
 
             Divider()
 
-            HStack {
-                Image(systemName: "music.note")
-                    .foregroundStyle(.cyan)
-                Text("Next Level")
-                Spacer()
-                Text("2021")
-                    .foregroundStyle(.secondary)
-            }
+            SongLinkView(
+                title: "Next Level",
+                year: "2021",
+                youtubeURL: "https://www.youtube.com/watch?v=4TWR90KJl84",
+                color: .cyan
+            )
 
             Divider()
 
-            HStack {
-                Image(systemName: "music.note")
-                    .foregroundStyle(.pink)
-                Text("Drama")
-                Spacer()
-                Text("2023")
-                    .foregroundStyle(.secondary)
-            }
+            SongLinkView(
+                title: "Drama",
+                year: "2023",
+                youtubeURL: "https://www.youtube.com/watch?v=D8VEhcPeSlc",
+                color: .pink
+            )
 
             Divider()
 
-            HStack {
-                Image(systemName: "music.note")
-                    .foregroundStyle(.orange)
-                Text("Supernova")
-                Spacer()
-                Text("2024")
-                    .foregroundStyle(.secondary)
-            }
+            SongLinkView(
+                title: "Supernova",
+                year: "2024",
+                youtubeURL: "https://www.youtube.com/watch?v=phuiiNCxRMg",
+                color: .orange
+            )
         }
         .padding()
         .background(Color.gray.opacity(0.2))
